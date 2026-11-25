@@ -1,4 +1,3 @@
-
 const express = require("express");
 
 const router = express.Router();
@@ -19,7 +18,7 @@ const authenticateToken = require("../middleware/authMiddleware");
  *   post:
  *     summary: Register a new Student account
  *     tags: [Authentication]
- * security: []  
+ *     security: []
  *     requestBody:
  *       required: true
  *       content:
@@ -59,6 +58,7 @@ router.post("/register", authController.register);
  *   post:
  *     summary: Login to the application
  *     tags: [Authentication]
+ *     security: []
  *     requestBody:
  *       required: true
  *       content:
@@ -91,6 +91,7 @@ router.post("/login", authController.login);
  *   post:
  *     summary: Refresh access token
  *     tags: [Authentication]
+ *     security: []
  *     requestBody:
  *       required: true
  *       content:
@@ -116,6 +117,7 @@ router.post("/refresh", authController.refresh);
  *   post:
  *     summary: Logout and revoke refresh token
  *     tags: [Authentication]
+ *     security: []
  *     requestBody:
  *       required: true
  *       content:

@@ -4,7 +4,7 @@ const express = require("express");
 const cors = require("cors");
 const helmet = require("helmet");
 const swaggerUi = require("swagger-ui-express");
-
+const userRoutes = require("./routes/userRoutes");
 const authRoutes = require("./routes/authRoutes");
 const swaggerSpec = require("./config/swagger");
 const pool = require("./config/database");
@@ -34,6 +34,7 @@ app.use(express.json());
 
 // Routes
 app.use("/api/auth", authRoutes);
+app.use("/api/users", userRoutes);
 
 // Swagger UI
 app.use(
