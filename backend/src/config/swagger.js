@@ -44,8 +44,7 @@ const options = {
       },
     },
 
-    // GLOBAL security -> this is what makes the Authorize button appear
-    // and applies the token to every operation by default.
+  
     security: [{ bearerAuth: [] }],
   },
 
