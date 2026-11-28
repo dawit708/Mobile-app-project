@@ -11,6 +11,8 @@ const pool = require("./config/database");
 const announcementRoutes = require("./routes/announcementRoutes");
 const eventRoutes = require("./routes/eventRoutes");
 const clubRoutes = require("./routes/clubRoutes");
+const facilityRoutes = require("./routes/facilityRoutes");
+const serviceCategoryRoutes = require("./routes/serviceCategoryRoutes");
 const app = express();
 
 // ------------------------------------------------------------------
@@ -40,7 +42,8 @@ app.use("/api/users", userRoutes);
 app.use("/api/announcements", announcementRoutes);
 app.use("/api/events", eventRoutes);
 app.use("/api/clubs", clubRoutes);
-
+app.use("/api/facilities", facilityRoutes);
+app.use("/api/service-categories", serviceCategoryRoutes);
 // Swagger UI
 app.use(
   "/api-docs",
